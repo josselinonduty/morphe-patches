@@ -38,6 +38,8 @@ Found a bug or want a feature? [Open an issue](https://github.com/josselinonduty
 
 #### A list of your patches will automatically be shown here after your first patches release is created.
 
+<!-- PATCHES_END -->
+
 &nbsp;
 
 ## ➕ Adding a new app
