@@ -31,8 +31,6 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      # The Morphe Gradle plugin reads gpr.user/gpr.key (or GITHUB_TOKEN, which
-      # here is the app token and cannot read packages). Use the workflow token.
       - name: Configure GitHub Packages credentials
         env:
           GPR_USER: ${{ github.actor }}
