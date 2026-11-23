@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/josselinonduty/morphe-patches/compare/v1.1.0...v1.2.0) (2026-11-23)
+
+### ✨ New Features
+
+* **snapchat:** add one-time modified-app disclaimer ([4d64827](https://github.com/josselinonduty/morphe-patches/commit/4d64827ec58e8238ad51331ffbfbb73be93be597))
+
 ## [1.2.0-dev.1](https://github.com/josselinonduty/morphe-patches/compare/v1.1.0...v1.2.0-dev.1) (2026-11-23)
 
 ### ✨ New Features
