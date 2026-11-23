@@ -28,16 +28,11 @@ Found a bug or want a feature? [Open an issue](https://github.com/josselinonduty
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
+> **[v1.0.0-dev.1](https://github.com/josselinonduty/morphe-patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`dev`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**10 patches** across **1 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
 
-<!-- Do not modify this section by hand. The patch list is generated when release.yml creates a new release.
-     
-     If you wish for the patches list to be collapsed, then remove the word 'EXPANDED' from the comment tag above.
-
-     If you wish to manually keep this list updated then remove the PATCHES_START and PATCHES_END 
-     comment blocks entirely. -->
-
-#### A list of your patches will automatically be shown here after your first patches release is created.
-
+| # | App | Patches | Version | Package |
+|---|---|---|---|---|
+| 1 | [**Snapchat**](PATCHES.md#snapchat-comsnapchatandroid) | 10 | `14.33.1.0` | [`com.snapchat.android`](https://play.google.com/store/apps/details?id=com.snapchat.android) |
 <!-- PATCHES_END -->
 
 &nbsp;
