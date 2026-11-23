@@ -1,16 +1,22 @@
-# 🧩 Snapchat patches for Morphe
+# 🧩 josselinonduty's patches for Morphe
 
-Privacy and UI patches for Snapchat, for use with [Morphe](https://morphe.software).
+Personal [Morphe](https://morphe.software) patches for Android apps.
 
-Personal-use patches. Not affiliated with Morphe or Snapchat.
+Personal use. Not affiliated with Morphe or the patched apps.
 
-## ❓ About
+## 📱 Apps
 
-- App: `com.snapchat.android` **14.33.1.0** only.
-- Patches match stable anchors (strings, structure), not obfuscated names. A new Snapchat release can still break them.
-- `Spoof Snapchat signature` is required: login fails once the APK is re-signed. It reports Snapchat's original public certificate to the app, without root.
+| App | Package | Version | Focus |
+|-----|---------|---------|-------|
+| Snapchat | `com.snapchat.android` | 14.33.1.0 | Privacy, minimal UI |
 
-### How to use these patches
+### Snapchat
+
+- Targets `14.33.1.0` only.
+- Patches match stable anchors (strings, structure), not obfuscated names. A new release can still break them.
+- `Spoof Snapchat signature` is required: login fails once the APK is re-signed. It reports the original public certificate to the app, without root.
+
+## ❓ How to use these patches
 
 Add this repo URL to Morphe Manager: https://github.com/josselinonduty/morphe-patches
 
