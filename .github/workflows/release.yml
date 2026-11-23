@@ -12,7 +12,6 @@ jobs:
       packages: read
     runs-on: ubuntu-latest
     steps:
-      # GitHub App token allowed to bypass the "require pull request" ruleset on main.
       - name: Generate app token
         uses: actions/create-github-app-token@v1
         id: app-token
