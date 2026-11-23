@@ -43,6 +43,20 @@ object BlizzardUploadFingerprint : Fingerprint(
     ),
 )
 
+// Anchor (14.33.1.0: Ldeh;->buildAdRequest): ConversationAdsManagerDelegate, the JNI delegate the
+// native Friends/Chat feed calls to build the request for its sponsored row ("Primark · Publicité").
+// Method name and types belong to the JNI interface, so they are not obfuscated.
+// Reporting NOTFOUND makes the native side drop the request, so no ad row is inserted.
+object ChatFeedAdRequestFingerprint : Fingerprint(
+    name = "buildAdRequest",
+    returnType = "V",
+    parameters = listOf(
+        "Lcom/snapchat/client/messaging/BuildAdRequestCallback;",
+        "Lcom/snapchat/client/messaging/BuildAdRequestMetadata;",
+    ),
+    custom = { _, classDef -> !AccessFlags.ABSTRACT.isSet(classDef.accessFlags) },
+)
+
 // Spec: S1.4. Anchor: <uses-permission> names (not obfuscated).
 private val removeAdIdPermissionsPatch = resourcePatch {
     compatibleWith(SNAPCHAT)
@@ -57,12 +71,20 @@ private val removeAdIdPermissionsPatch = resourcePatch {
 
 val disableAdsPatch = snapBytecodePatch(
     name = "Disable ads",
-    description = "Blocks ad insertion, Blizzard analytics uploads and removes the advertising ID permissions.",
+    description = "Blocks ad insertion (incl. chat feed sponsored rows), Blizzard analytics uploads and removes the advertising ID permissions.",
 ) {
     dependsOn(removeAdIdPermissionsPatch)
 
     execute {
         AdEnabledGateFingerprint.method.returnFalse()
+
+        ChatFeedAdRequestFingerprint.method.prepend(
+            """
+                sget-object v0, Lcom/snapchat/client/messaging/CallbackStatus;->NOTFOUND:Lcom/snapchat/client/messaging/CallbackStatus;
+                invoke-virtual {p1, v0}, Lcom/snapchat/client/messaging/BuildAdRequestCallback;->onError(Lcom/snapchat/client/messaging/CallbackStatus;)V
+                return-void
+            """,
+        )
 
         BlizzardUploadFingerprint.method.prepend(
             """
