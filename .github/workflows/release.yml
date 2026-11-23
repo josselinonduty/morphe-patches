@@ -48,8 +48,8 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-          ORG_GRADLE_PROJECT_gpr.user: ${{ github.actor }}
-          ORG_GRADLE_PROJECT_gpr.key: ${{ secrets.GITHUB_TOKEN }}
+          GPR_USER: ${{ github.actor }}
+          GPR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
 
       # Always verify compilation when semantic-release did not publish a release.
