@@ -1,6 +1,6 @@
 package fr.josselinonduty.snapchat.telemetry
 
-import fr.josselinonduty.snapchat.removeUsesPermissions
+import fr.josselinonduty.shared.removeUsesPermissions
 import fr.josselinonduty.snapchat.snapResourcePatch
 
 // Spec: S1.4. Anchor: <uses-permission> names (not obfuscated).

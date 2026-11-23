@@ -14,8 +14,8 @@ group = "fr.josselinonduty"
 
 patches {
     about {
-        name = "Josselin Snapchat Patches"
-        description = "Privacy and UI patches for Snapchat"
+        name = "josselinonduty Patches"
+        description = "Privacy and UI patches for several Android apps"
         source = "git@github.com:josselinonduty/morphe-patches.git"
         author = "josselinonduty"
         contact = "na"

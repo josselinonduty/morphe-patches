@@ -2,7 +2,7 @@ package fr.josselinonduty.snapchat.location
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.methodCall
-import fr.josselinonduty.snapchat.returnNull
+import fr.josselinonduty.shared.returnNull
 import fr.josselinonduty.snapchat.snapBytecodePatch
 
 // Anchor (14.33.1.0: Lxu1;->a()Ljava/lang/String;): picks "fused"/"gps"/"network"

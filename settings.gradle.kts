@@ -19,3 +19,10 @@ pluginManagement {
 plugins {
     id("app.morphe.patches") version "2.1.1"
 }
+
+settings {
+    extensions {
+        // Each app keeps its own android.namespace, this is only the fallback.
+        defaultNamespace = "fr.josselinonduty.extension"
+    }
+}

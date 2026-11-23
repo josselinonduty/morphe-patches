@@ -2,7 +2,7 @@ package fr.josselinonduty.snapchat.telemetry
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.methodCall
-import fr.josselinonduty.snapchat.prepend
+import fr.josselinonduty.shared.prepend
 import fr.josselinonduty.snapchat.snapBytecodePatch
 import com.android.tools.smali.dexlib2.AccessFlags
 

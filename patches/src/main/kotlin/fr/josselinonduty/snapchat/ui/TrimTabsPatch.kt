@@ -2,7 +2,7 @@ package fr.josselinonduty.snapchat.ui
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.methodCall
-import fr.josselinonduty.snapchat.prepend
+import fr.josselinonduty.shared.prepend
 import fr.josselinonduty.snapchat.snapBytecodePatch
 
 private const val UI_TABS = "Lfr/josselinonduty/snapchat/UiTabs;"
@@ -29,7 +29,7 @@ val trimTabsPatch = snapBytecodePatch(
     name = "Keep only Chat and Camera tabs",
     description = "Shrinks the tab bar to Chat + Camera (hides Map, Stories, Spotlight).",
 ) {
-    extendWith("extensions/extension.mpe")
+    extendWith("extensions/snapchat.mpe")
 
     execute {
         // o() = Chat, m() = Camera; Chat must stay first.

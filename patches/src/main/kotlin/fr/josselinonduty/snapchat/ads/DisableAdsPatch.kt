@@ -1,7 +1,7 @@
 package fr.josselinonduty.snapchat.ads
 
 import app.morphe.patcher.Fingerprint
-import fr.josselinonduty.snapchat.returnFalse
+import fr.josselinonduty.shared.returnFalse
 import fr.josselinonduty.snapchat.snapBytecodePatch
 
 // Anchor (14.33.1.0: Lmcp;->f(Lwb0;Lmzg;)Z): the single per-surface ad gate

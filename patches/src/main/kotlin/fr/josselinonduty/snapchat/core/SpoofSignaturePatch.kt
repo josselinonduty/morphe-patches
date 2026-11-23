@@ -14,7 +14,7 @@ val spoofSignaturePatch = patch(
     description = "Required for login: reports Snapchat's original public certificate to in-process readers.",
 ) {
     compatibleWith(SNAPCHAT)
-    extendWith("extensions/extension.mpe")
+    extendWith("extensions/snapchat.mpe")
 
     execute {
         resourceXml("AndroidManifest.xml").use { manifest ->

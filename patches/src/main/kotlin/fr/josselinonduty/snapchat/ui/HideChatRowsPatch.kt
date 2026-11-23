@@ -4,7 +4,7 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.patch.bytecodePatch
 import fr.josselinonduty.snapchat.SNAPCHAT
 import fr.josselinonduty.snapchat.core.spoofSignaturePatch
-import fr.josselinonduty.snapchat.prepend
+import fr.josselinonduty.shared.prepend
 import fr.josselinonduty.snapchat.snapBytecodePatch
 
 private const val UI_CHAT = "Lfr/josselinonduty/snapchat/UiChatList;"
@@ -26,7 +26,7 @@ object ChatRowBindFingerprint : Fingerprint(
 val chatRowHookPatch = bytecodePatch {
     compatibleWith(SNAPCHAT)
     dependsOn(spoofSignaturePatch)
-    extendWith("extensions/extension.mpe")
+    extendWith("extensions/snapchat.mpe")
 
     execute {
         ChatRowBindFingerprint.method.prepend(

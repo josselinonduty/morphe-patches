@@ -1,7 +1,7 @@
 package fr.josselinonduty.snapchat.location
 
-import fr.josselinonduty.snapchat.disableComponents
-import fr.josselinonduty.snapchat.removeUsesPermissions
+import fr.josselinonduty.shared.disableComponents
+import fr.josselinonduty.shared.removeUsesPermissions
 import fr.josselinonduty.snapchat.snapResourcePatch
 
 // Spec: S3.1, S3.3. Anchors: <uses-permission> and Loda component names (not obfuscated).

@@ -1,5 +1,5 @@
 extension {
-    name = "extensions/extension.mpe"
+    name = "extensions/snapchat.mpe"
 }
 
 android {
