@@ -12,7 +12,7 @@ import fr.josselinonduty.snapchat.core.spoofSignaturePatch
 val SNAPCHAT = Compatibility(
     name = "Snapchat",
     packageName = "com.snapchat.android",
-    apkFileType = ApkFileType.APKM,
+    apkFileType = ApkFileType.APKM_REQUIRED,
     appIconColor = 0xFFFC00,
     targets = listOf(AppTarget(version = "14.33.1.0")),
 )
