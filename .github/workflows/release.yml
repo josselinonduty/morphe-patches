@@ -31,17 +31,6 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Configure GitHub Packages credentials
-        env:
-          GPR_USER: ${{ github.actor }}
-          GPR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p ~/.gradle
-          {
-            echo "gpr.user=$GPR_USER"
-            echo "gpr.key=$GPR_TOKEN"
-          } >> ~/.gradle/gradle.properties
-
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -58,6 +47,8 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          ORG_GRADLE_PROJECT_gpr.user: ${{ github.actor }}
+          ORG_GRADLE_PROJECT_gpr.key: ${{ secrets.GITHUB_TOKEN }}
           MORPHE_SIGNING_KEY: ${{ secrets.MORPHE_SIGNING_KEY }}
 
       # Always verify compilation when semantic-release did not publish a release.
