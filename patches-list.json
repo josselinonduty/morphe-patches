@@ -1,37 +1,10 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.1",
+  "version": "1.0.0-dev.2",
   "patches": [
     {
-      "name": "Block Blizzard uploads",
-      "description": "Makes the Blizzard analytics upload runner a no-op that reports success.",
-      "default": true,
-      "category": null,
-      "compatiblePackages": [
-        {
-          "packageName": "com.snapchat.android",
-          "name": "Snapchat",
-          "description": null,
-          "apkFileType": "APKM",
-          "appIconColor": "#FFFC00",
-          "signatures": null,
-          "formFactor": "MOBILE",
-          "targets": [
-            {
-              "version": "14.33.1.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
       "name": "Disable ads",
-      "description": "Makes the ad gate always report ads disabled so no sponsored items are inserted.",
+      "description": "Blocks ad insertion (incl. chat feed sponsored rows), Blizzard analytics uploads and removes the advertising ID permissions.",
       "default": true,
       "category": null,
       "compatiblePackages": [
@@ -57,8 +30,8 @@
       "options": []
     },
     {
-      "name": "Disable location providers",
-      "description": "Reports no usable location provider so the app cannot read or subscribe to a real fix.",
+      "name": "Disable location",
+      "description": "Removes location permissions and reports no usable location provider.",
       "default": true,
       "category": null,
       "compatiblePackages": [
@@ -138,33 +111,6 @@
       "options": []
     },
     {
-      "name": "Keep only Chat and Camera tabs",
-      "description": "Shrinks the tab bar to Chat + Camera (hides Map, Stories, Spotlight).",
-      "default": true,
-      "category": null,
-      "compatiblePackages": [
-        {
-          "packageName": "com.snapchat.android",
-          "name": "Snapchat",
-          "description": null,
-          "apkFileType": "APKM",
-          "appIconColor": "#FFFC00",
-          "signatures": null,
-          "formFactor": "MOBILE",
-          "targets": [
-            {
-              "version": "14.33.1.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
       "name": "Remove Games tab",
       "description": "Shows the plain Camera icon and label in the center tab instead of Games.",
       "default": true,
@@ -192,8 +138,8 @@
       "options": []
     },
     {
-      "name": "Remove advertising ID permissions",
-      "description": "Removes the advertising-ID permissions.",
+      "name": "Remove Map tab",
+      "description": "Removes the Map tab from the tab bar.",
       "default": true,
       "category": null,
       "compatiblePackages": [
@@ -219,8 +165,35 @@
       "options": []
     },
     {
-      "name": "Remove location permissions",
-      "description": "Removes location permissions and disables Loda location components.",
+      "name": "Remove Spotlight tab",
+      "description": "Removes the Spotlight tab from the tab bar.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.snapchat.android",
+          "name": "Snapchat",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#FFFC00",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "14.33.1.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Remove Stories tab",
+      "description": "Removes the Stories tab from the tab bar.",
       "default": true,
       "category": null,
       "compatiblePackages": [
