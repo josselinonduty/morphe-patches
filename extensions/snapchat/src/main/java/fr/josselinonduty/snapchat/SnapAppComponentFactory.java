@@ -38,7 +38,9 @@ public final class SnapAppComponentFactory extends AppComponentFactory {
     @Override
     public Application instantiateApplication(ClassLoader classLoader, String className)
             throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        return delegate.instantiateApplication(classLoader, className);
+        Application app = delegate.instantiateApplication(classLoader, className);
+        Disclaimer.register(app);
+        return app;
     }
 
     @Override
