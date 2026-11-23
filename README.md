@@ -25,11 +25,11 @@ Prefer manual? Grab the `.mpp` bundle from the [latest release](https://github.c
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.1.0](https://github.com/josselinonduty/morphe-patches/releases/tag/v1.1.0)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`main`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**9 patches** across **1 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
+> **[v1.2.0-dev.1](https://github.com/josselinonduty/morphe-patches/releases/tag/v1.2.0-dev.1)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`dev`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**10 patches** across **1 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
 
 | # | App | Patches | Version | Package |
 |---|---|---|---|---|
-| 1 | [**Snapchat**](PATCHES.md#snapchat-comsnapchatandroid) | 9 | `14.33.1.0` | [`com.snapchat.android`](https://play.google.com/store/apps/details?id=com.snapchat.android) |
+| 1 | [**Snapchat**](PATCHES.md#snapchat-comsnapchatandroid) | 10 | `14.33.1.0` | [`com.snapchat.android`](https://play.google.com/store/apps/details?id=com.snapchat.android) |
 <!-- PATCHES_END -->
 
 &nbsp;
