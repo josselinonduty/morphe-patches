@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-23T18:08:29",
-  "description": "## 1.0.0 (2026-11-23)\n\n### 🐛 Bug Fixes\n\n* add missing PATCHES_END marker to README ([9aa3170](https://github.com/josselinonduty/morphe-patches/commit/9aa31707e6f09a0439599be864fd0bbe9845e59d))\n* trigger dev release ([6f39b1b](https://github.com/josselinonduty/morphe-patches/commit/6f39b1b106aa1623fd3c20da321494996e96c67a))",
-  "download_url": "https://github.com/josselinonduty/morphe-patches/releases/download/v1.0.0/patches-1.0.0.mpp",
+  "created_at": "2026-11-23T18:55:42",
+  "description": "## [1.1.0-dev.2](https://github.com/josselinonduty/morphe-patches/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2026-11-23)\n\n### 🐛 Bug Fixes\n\n* **snapchat:** require APKM bundle input ([bfe1ffc](https://github.com/josselinonduty/morphe-patches/commit/bfe1ffc195b85ea14f1c65b8b325650000e39546)), closes [#3](https://github.com/josselinonduty/morphe-patches/issues/3)",
+  "download_url": "https://github.com/josselinonduty/morphe-patches/releases/download/v1.1.0-dev.2/patches-1.1.0-dev.2.mpp",
   "signature_download_url": "",
-  "version": "1.0.0",
+  "version": "1.1.0-dev.2",
   "public_key": "OmxxYdeQIlukOZ4Tnh1iuEXSMzi1goFAA2aOMxgFXhc="
 }
