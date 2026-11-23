@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-23T18:55:42",
+  "created_at": "2026-11-23T20:02:41",
   "description": "## [1.1.0-dev.2](https://github.com/josselinonduty/morphe-patches/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2026-11-23)\n\n### 🐛 Bug Fixes\n\n* **snapchat:** require APKM bundle input ([bfe1ffc](https://github.com/josselinonduty/morphe-patches/commit/bfe1ffc195b85ea14f1c65b8b325650000e39546)), closes [#3](https://github.com/josselinonduty/morphe-patches/issues/3)",
   "download_url": "https://github.com/josselinonduty/morphe-patches/releases/download/v1.1.0-dev.2/patches-1.1.0-dev.2.mpp",
   "signature_download_url": "",
