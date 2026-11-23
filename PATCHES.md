@@ -1,6 +1,6 @@
 # Patches
 
-> Generated from `patches-list.json` — **v1.1.0** (`main`) · **9 patches** across **1 apps** · back to [README](README.md)
+> Generated from `patches-list.json` — **v1.2.0-dev.1** (`dev`) · **10 patches** across **1 apps** · back to [README](README.md)
 
 ---
 
@@ -18,6 +18,7 @@
 | **Remove Map tab** | Removes the Map tab from the tab bar. |
 | **Remove Spotlight tab** | Removes the Spotlight tab from the tab bar. |
 | **Remove Stories tab** | Removes the Stories tab from the tab bar. |
+| **Show disclaimer** | Shows a one-time warning before the login screen: Snapchat has historically been unfriendly to modified apps, so only use accounts you do not care about. |
 | **Spoof Snapchat signature** | Required for login: reports Snapchat's original public certificate to in-process readers. |
 
 ---

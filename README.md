@@ -1,60 +1,53 @@
-# 🧩 josselinonduty's patches for Morphe
+<div align="center">
 
-[Morphe](https://morphe.software) patches for Android apps, focused on privacy and a cleaner UI.
+# 🧩 josselinonduty's Morphe patches
 
-Unofficial community project. Not affiliated with or endorsed by Morphe, Snap Inc. or any patched app. All trademarks belong to their owners.
+Privacy-focused patches and a cleaner UI for Android apps.
 
-## 📱 Apps
+[![Latest release](https://img.shields.io/github/v/release/josselinonduty/morphe-patches?include_prereleases&style=for-the-badge&color=gray)](https://github.com/josselinonduty/morphe-patches/releases/latest)
+[![License](https://img.shields.io/github/license/josselinonduty/morphe-patches?style=for-the-badge&color=gray)](LICENSE)
 
-| App | Package | Version | Focus |
-|-----|---------|---------|-------|
-| Snapchat | `com.snapchat.android` | 14.33.1.0 | Privacy, minimal UI |
+<a href="https://morphe.software/add-source?github=josselinonduty/morphe-patches">
+  <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
+</a>
 
-### Snapchat
+</div>
 
-- Targets `14.33.1.0` only.
-- Patches match stable anchors (strings, structure), not obfuscated names. A new release can still break them.
-- `Spoof Snapchat signature` is required: login fails once the APK is re-signed. It reports the original public certificate to the app, without root.
+&nbsp;
 
-## ❓ How to use these patches
+## ❓ How to use
 
-1. Open Morphe Manager and add this repo as a patch source: https://github.com/josselinonduty/morphe-patches
-2. Provide an unpatched APK of a supported version (see [Apps](#-apps)) and select the patches you want.
+1. Click **Add to Morphe**, or add `https://github.com/josselinonduty/morphe-patches` as a patch source in Morphe Manager.
+2. Pick an unpatched APK of a supported version and select your patches.
 
-You can also download the `.mpp` bundle from the [latest release](https://github.com/josselinonduty/morphe-patches/releases/latest).
-
-Found a bug or want a feature? [Open an issue](https://github.com/josselinonduty/morphe-patches/issues/new/choose).
+Prefer manual? Grab the `.mpp` bundle from the [latest release](https://github.com/josselinonduty/morphe-patches/releases/latest). Enable `pre-release` in Morphe Manager for `dev` builds.
 
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.1.0](https://github.com/josselinonduty/morphe-patches/releases/tag/v1.1.0)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`main`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**9 patches** across **1 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
+> **[v1.2.0-dev.1](https://github.com/josselinonduty/morphe-patches/releases/tag/v1.2.0-dev.1)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`dev`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**10 patches** across **1 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
 
 | # | App | Patches | Version | Package |
 |---|---|---|---|---|
-| 1 | [**Snapchat**](PATCHES.md#snapchat-comsnapchatandroid) | 9 | `14.33.1.0` | [`com.snapchat.android`](https://play.google.com/store/apps/details?id=com.snapchat.android) |
+| 1 | [**Snapchat**](PATCHES.md#snapchat-comsnapchatandroid) | 10 | `14.33.1.0` | [`com.snapchat.android`](https://play.google.com/store/apps/details?id=com.snapchat.android) |
 <!-- PATCHES_END -->
 
 &nbsp;
 
-## ➕ Adding a new app
+## 📱 App notes
 
-1. Patches: `patches/src/main/kotlin/fr/josselinonduty/<app>/`, with an `<App>.kt` holding the `Compatibility` constant and the app's patch builders. Generic helpers go in `fr/josselinonduty/shared/`, patches that work on any app in `fr/josselinonduty/all/`.
-2. Extension (only if the patches need Java code): `extensions/<app>/` with `name = "extensions/<app>.mpe"` and its own `android.namespace`. Patches load it with `extendWith("extensions/<app>.mpe")`.
-3. Add the app to the Apps table above and to the `App` dropdown in `.github/ISSUE_TEMPLATE/`.
-4. Use the app as the commit scope: `feat(<app>): ...`, `bump(<app>): <version>`.
+**Snapchat**
 
-All apps ship in one bundle and share one release version.
+- Targets `14.33.1.0` only. A new release can break the patches.
+- Input must be an APKM bundle.
+- `Spoof Snapchat signature` is required, otherwise login fails once the APK is re-signed.
 
-## 🛠️ Development
+## 🤝 Contributing
 
-1. Follow the [Morphe development setup](https://github.com/MorpheApp/morphe-documentation/tree/main/docs/morphe-development). Java 21.
-2. Add `gpr.user` and `gpr.key` (a GitHub token with `read:packages`) to `~/.gradle/gradle.properties`. Morphe's dependencies are served from GitHub Packages, which requires authentication even for public repos.
-3. Build: `./gradlew :patches:buildAndroid` (output: `patches/build/libs/patches-*.mpp`).
-4. Contributions are welcome: branch from `dev` and open a pull request against it. Commits follow [Conventional Commits](https://www.conventionalcommits.org). Merging `dev` into `main` creates a stable release.
-
-Releases are signed. The public key is `morphe-signing.pub`.
+Bug or idea? [Open an issue](https://github.com/josselinonduty/morphe-patches/issues/new/choose). Want to contribute or add an app? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📄 License
 
 GPLv3 with the Morphe additional terms, see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+<sub>Unofficial community project, not affiliated with or endorsed by Morphe, Snap Inc. or any patched app. Trademarks belong to their owners. Releases are signed with [`morphe-signing.pub`](morphe-signing.pub).</sub>
