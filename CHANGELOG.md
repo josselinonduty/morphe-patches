@@ -1,3 +1,9 @@
+## [1.1.0-dev.2](https://github.com/josselinonduty/morphe-patches/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2026-11-23)
+
+### 🐛 Bug Fixes
+
+* **snapchat:** require APKM bundle input ([bfe1ffc](https://github.com/josselinonduty/morphe-patches/commit/bfe1ffc195b85ea14f1c65b8b325650000e39546)), closes [#3](https://github.com/josselinonduty/morphe-patches/issues/3)
+
 ## [1.1.0-dev.1](https://github.com/josselinonduty/morphe-patches/compare/v1.0.0...v1.1.0-dev.1) (2026-11-23)
 
 ### ✨ New Features
