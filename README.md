@@ -1,8 +1,8 @@
 # 🧩 josselinonduty's patches for Morphe
 
-Personal [Morphe](https://morphe.software) patches for Android apps.
+[Morphe](https://morphe.software) patches for Android apps, focused on privacy and a cleaner UI.
 
-Personal use. Not affiliated with Morphe or the patched apps.
+Unofficial community project. Not affiliated with or endorsed by Morphe, Snap Inc. or any patched app. All trademarks belong to their owners.
 
 ## 📱 Apps
 
@@ -18,9 +18,12 @@ Personal use. Not affiliated with Morphe or the patched apps.
 
 ## ❓ How to use these patches
 
-Add this repo URL to Morphe Manager: https://github.com/josselinonduty/morphe-patches
+1. Open Morphe Manager and add this repo as a patch source: https://github.com/josselinonduty/morphe-patches
+2. Provide an unpatched APK of a supported version (see [Apps](#-apps)) and select the patches you want.
 
-The repo is private: Morphe Manager needs a GitHub personal access token with read access to it.
+You can also download the `.mpp` bundle from the [latest release](https://github.com/josselinonduty/morphe-patches/releases/latest).
+
+Found a bug or want a feature? [Open an issue](https://github.com/josselinonduty/morphe-patches/issues/new/choose).
 
 ## 🩹 Patches list
 
@@ -49,9 +52,9 @@ All apps ship in one bundle and share one release version.
 ## 🛠️ Development
 
 1. Follow the [Morphe development setup](https://github.com/MorpheApp/morphe-documentation/tree/main/docs/morphe-development). Java 21.
-2. Add `gpr.user` and `gpr.key` (token with `read:packages`) to `~/.gradle/gradle.properties`.
+2. Add `gpr.user` and `gpr.key` (a GitHub token with `read:packages`) to `~/.gradle/gradle.properties`. Morphe's dependencies are served from GitHub Packages, which requires authentication even for public repos.
 3. Build: `./gradlew :patches:buildAndroid` (output: `patches/build/libs/patches-*.mpp`).
-4. Work on `dev`. Commits follow [Conventional Commits](https://www.conventionalcommits.org). Merging `dev` into `main` creates a stable release.
+4. Contributions are welcome: branch from `dev` and open a pull request against it. Commits follow [Conventional Commits](https://www.conventionalcommits.org). Merging `dev` into `main` creates a stable release.
 
 Releases are signed. The public key is `morphe-signing.pub`.
 
